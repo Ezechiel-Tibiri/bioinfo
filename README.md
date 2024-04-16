@@ -5,7 +5,7 @@ Ce dépôt GitHub contient les ressources nécessaires pour suivre le cours de b
  Si vous n'avez pas déjà Conda, vous pouvez l'installer en suivant les instructions sur le [site officiel](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da).
 ```bash
 wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-bash bash Anaconda3-5.2.0-Linux-x86_64.sh
+bash Anaconda3-5.2.0-Linux-x86_64.sh
 ```
 puis configurer votre environnement conda
 
