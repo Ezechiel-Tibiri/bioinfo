@@ -12,6 +12,13 @@ puis configurer votre environnement conda
 ```bash
 conda config --set auto_activate_base false
 ```
+
+```bash
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
 ### 2. Création de l'environnement QIIME2 
 Utilisez la commande suivante pour créer un environnement QIIME2 
 
