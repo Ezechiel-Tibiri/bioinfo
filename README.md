@@ -17,3 +17,15 @@ Utilisez la commande suivante pour créer un environnement QIIME2
 
 ```bash
 conda env create -n qiime2-env --file envs/qiime2-amplicon-2024.2-py38-linux-conda.yml
+```
+Activer l'environnement conda
+
+```bash
+conda activate qiime2-env
+```
+
+Tester l'installation
+
+```bash
+qiime --help
+```
