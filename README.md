@@ -1,38 +1,73 @@
-# Cours de Bioinformatique Appliquée
-Ce dépôt GitHub contient les ressources nécessaires pour suivre le cours de bioinformatique appliquée basé sur l'article `Gut microbiota of preterm infants in the neonatal intensive care unit: a study from a tertiary care center in northern India` . Le cours utilise l'outil QIIME2 pour effectuer les analyses de données.
-## Installation de QIIME2
-### 1. Installation Conda
- Si vous n'avez pas déjà Conda, vous pouvez l'installer en suivant les instructions sur le [site officiel](https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da).
-```bash
-wget https://repo.continuum.io/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-bash Anaconda3-5.2.0-Linux-x86_64.sh
-```
-puis configurer votre environnement conda
+# Bioinformatics Applied Course Docker Environment
+This Dockerfile sets up an extended Jupyter environment tailored for bioinformatics analysis. It includes various Python and system-level packages necessary for bioinformatics tasks.
+
+## Description
+This Docker environment is designed to support bioinformatics courses and analyses, providing a comprehensive set of tools and libraries commonly used in the field.
+
+## Maintainer
+Ezechiel B. TIBIRI
+Email: ezechiel.tibiri@ujkz.bf
+
+## Docker installation and configuration
+* On Linux 
 
 ```bash
-conda config --set auto_activate_base false
+sudo apt update && sudo apt upgrade -y
 ```
+Installation of Docker
 
 ```bash
-conda config --add channels defaults
-conda config --add channels bioconda
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-```
-### 2. Création de l'environnement QIIME2 
-Utilisez la commande suivante pour créer un environnement QIIME2 
-
-```bash
-conda env create -n qiime2-env --file envs/qiime2-amplicon-2024.2-py38-linux-conda.yml
-```
-Activer l'environnement conda
-
-```bash
-conda activate qiime2-env
+sudo apt install docker.io
 ```
 
-Tester l'installation
+```bash
+sudo systemctl start docker
+```
+Chech installation
 
 ```bash
-qiime --help
+docker --version
+```
+```bash
+sudo usermod -aG docker $USER
+```
+
+* On WSL (Windows Subsystem for Linux):
+*Activating WSL:* Before installing Docker on WSL, ensure that WSL is enabled on your Windows system. You can enable WSL by following the instructions provided by Microsoft: Install WSL on Windows 10
+
+*Installing Docker Desktop for Windows:* On Windows, the simplest way to use Docker with WSL is to install Docker Desktop for Windows, which supports WSL 2. You can download Docker Desktop from the official Docker website: Docker Desktop for Windows
+
+*Configuring Docker with WSL:* Once Docker Desktop is installed, ensure that it is configured to use WSL. You can configure Docker Desktop to use WSL by selecting "Settings" in the Docker taskbar, then enabling "Use the WSL 2 based engine".
+
+*Verification of installation:* You can verify if Docker is working correctly with WSL by opening a WSL terminal and running the following command:
+
+```bash
+docker --version
+```
+
+## Usage
+* To build the Docker image, use the following command:
+
+```bash
+docker build -t bioinformatics-course .
+```
+* For our course, we will use an already available docker image
+```
+docker load -i bioinformatics-course.tar
+```
+* Load your docker image
+```bash
+docker run -p 8888:8888 bioinformatics-course
+```
+
+* Copy a directory from the host system to a Docker container:
+
+```bash
+docker cp directory/ container_name:/path/destination/
+```
+
+* Copy a directory from a Docker container to the host system:
+
+```bash
+docker cp container_name:/path/source/ directory/
 ```
