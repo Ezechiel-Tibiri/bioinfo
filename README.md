@@ -35,11 +35,15 @@ sudo usermod -aG docker $USER
 ```
 
 ### On WSL (Windows Subsystem for Linux):
+
+[Installation and configuration of Docker on Windows](https://www.google.com/search?sca_esv=04df3a7c5916b84e&q=comment+installer+et+config[…]xoZy37-GFAxXrYUEAHUzEBtsQ0pQJegQIDRAB&biw=823&bih=464&dpr=3.5)
+
 *Activating WSL:* Before installing Docker on WSL, ensure that WSL is enabled on your Windows system. You can enable WSL by following the instructions provided by Microsoft: [Install WSL on Windows 10](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 *Installing Docker Desktop for Windows:* On Windows, the simplest way to use Docker with WSL is to install Docker Desktop for Windows, which supports WSL 2. You can download Docker Desktop from the official Docker website: [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/)
 
 *Configuring Docker with WSL:* Once Docker Desktop is installed, ensure that it is configured to use WSL. You can configure Docker Desktop to use WSL by selecting "Settings" in the Docker taskbar, then enabling "Use the WSL 2 based engine".
+
 
 * You can verify if Docker is working correctly with WSL by opening a WSL terminal and running the following command:
 
