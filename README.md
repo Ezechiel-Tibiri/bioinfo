@@ -36,7 +36,7 @@ sudo usermod -aG docker $USER
 
 ### On WSL (Windows Subsystem for Linux):
 
-[Installation and configuration of Docker on Windows](https://www.google.com/search?sca_esv=04df3a7c5916b84e&q=comment+installer+et+config[…]xoZy37-GFAxXrYUEAHUzEBtsQ0pQJegQIDRAB&biw=823&bih=464&dpr=3.5)
+Watch this video for the Docker installation: [Installation and configuration of Docker on Windows](https://www.google.com/search?sca_esv=04df3a7c5916b84e&q=comment+installer+et+config[…]xoZy37-GFAxXrYUEAHUzEBtsQ0pQJegQIDRAB&biw=823&bih=464&dpr=3.5)
 
 *Activating WSL:* Before installing Docker on WSL, ensure that WSL is enabled on your Windows system. You can enable WSL by following the instructions provided by Microsoft: [Install WSL on Windows 10](https://learn.microsoft.com/en-us/windows/wsl/install)
 
