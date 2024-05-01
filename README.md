@@ -52,10 +52,10 @@ docker --version
 ```
 
 ## Usage
-* To build the Docker image, use the following command:
+* Test the Docker image, use the following command:
 
 ```bash
-docker build -t bioinformatics-course .
+docker run hello-world
 ```
 * For our course, we will use an already available docker image
 ```
